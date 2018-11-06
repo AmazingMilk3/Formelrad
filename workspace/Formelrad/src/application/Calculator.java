@@ -50,6 +50,10 @@ public class Calculator {
 	public double iAusPundR(double p, double r) {
 		return Math.sqrt(p / r); 
 	}
+	
+	public double iAusPundU(double p, double u) {
+		return p / u;
+	}
 
 	@Override
 	public String toString() {
