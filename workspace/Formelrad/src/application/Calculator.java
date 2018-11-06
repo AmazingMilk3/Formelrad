@@ -34,6 +34,10 @@ public class Calculator {
 	public double getWiderstand() {
 		return widerstand;
 	}
+	
+	public double pAusUundI(double u, double i) {
+		return u * i;
+	}
 
 	@Override
 	public String toString() {
