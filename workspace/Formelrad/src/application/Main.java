@@ -77,6 +77,11 @@ public class Main extends Application {
 			btnBerechnen.setText("Berechnen");
 			root.getChildren().add(btnBerechnen);
 
+			Button btnInhalteLöschen = new Button();
+			btnInhalteLöschen.relocate(200, 445);
+			btnInhalteLöschen.setText("Inhalte löschen");
+			root.getChildren().add(btnInhalteLöschen);
+
 			btnBerechnen.setOnAction(e -> {
 
 				txLeistung.setStyle("");
