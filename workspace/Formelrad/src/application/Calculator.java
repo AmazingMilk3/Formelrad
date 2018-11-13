@@ -116,14 +116,20 @@ public class Calculator {
 	}
 	
 	public double iAusPundR(double p, double r) {
+		System.out.println("I calculated from P and R");
+		
 		return Math.sqrt(p / r); 
 	}
 	
 	public double iAusPundU(double p, double u) {
+		System.out.println("I calculated from P and U");
+		
 		return p / u;
 	}
 	
 	public double iAusUundR(double u, double r) {
+		System.out.println("I calculated from U and R");
+		
 		return u / r;
 	}
 	
