@@ -152,14 +152,20 @@ public class Calculator {
 	}
 	
 	public double rAusUundP(double u, double p) {
+		System.out.println("R calculated from U and P");
+		
 		return (u*u)/p;
 	}
 	
 	public double rAusPundI(double p, double i) {
+		System.out.println("R calculated from I and P");
+		
 		return p/(i*i);
 	}
 	
 	public double rAusUundI(double u, double i) {
+		System.out.println("R calculated from U and I");
+		
 		return u/i;
 	}
 }
