@@ -80,6 +80,12 @@ public class Main extends Application {
 			root.getChildren().add(btnBerechnen);
 
 			btnBerechnen.setOnAction(e -> {
+
+				txLeistung.setStyle("");
+				txSpannung.setStyle("");
+				txStrom.setStyle("");
+				txWiderstand.setStyle("");
+
 				double power = 0.0;
 				double tension = 0.0;
 				double current = 0.0;
