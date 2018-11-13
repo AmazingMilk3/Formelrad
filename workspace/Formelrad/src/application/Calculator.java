@@ -68,9 +68,16 @@ public class Calculator {
 	}
 
 	public void calculate() {
-		/* Hier auf Grund der vorhanden Werte entscheiden
-		 * welche Methode unten aufgerufen werden muss.
-		 */
+		int gegebeneWerte = 0;
+		
+		if (leistung > 0) gegebeneWerte++;
+		if (spannung > 0) gegebeneWerte++;
+		if (strom > 0) gegebeneWerte++;
+		if (widerstand > 0) gegebeneWerte++;
+		
+		if (gegebeneWerte > 1 && gegebeneWerte < 4) {
+			
+		}
 	}
 	
 	/* Hier die Methoden mit den Formlen hinzufügen
