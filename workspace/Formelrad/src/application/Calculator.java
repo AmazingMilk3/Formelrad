@@ -68,15 +68,29 @@ public class Calculator {
 	}
 
 	public void calculate() {
-		int gegebeneWerte = 0;
-		
-		if (leistung > 0) gegebeneWerte++;
-		if (spannung > 0) gegebeneWerte++;
-		if (strom > 0) gegebeneWerte++;
-		if (widerstand > 0) gegebeneWerte++;
-		
-		if (gegebeneWerte > 1 && gegebeneWerte < 4) {
-			
+		if (leistung > 0) {
+			if (spannung > 0) {
+				strom = iAusPundU(leistung, spannung);
+				widerstand = rAusUundP(spannung, leistung);
+			}
+			else if (strom > 0) {
+				spannung = uAusPundI(leistung, strom);
+				widerstand = rAusPundI(leistung, strom);
+			}
+			else if (widerstand > 0) {
+				strom = iAusPundR(leistung, widerstand);
+				spannung = uAusPundR(leistung, widerstand);
+			}
+		}
+		else if (spannung > 0) {
+			if (strom > 0) {
+				leistung = pAusUundI(spannung, strom);
+				widerstand = rAusUundI(spannung, strom);
+			}
+			else if (widerstand > 0) {
+				strom = iAusUundR(spannung, widerstand);
+				leistung = pAusUundR(spannung, widerstand);
+			}
 		}
 	}
 	
