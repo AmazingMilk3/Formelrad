@@ -134,14 +134,20 @@ public class Calculator {
 	}
 	
 	public double uAusRundI(double r, double i) {
+		System.out.println("U calculated from R and I");
+		
 		return r*i;
 	}
 	
 	public double uAusPundI(double p, double i) {
+		System.out.println("U calculated from P and I");
+		
 		return p/i;
 	}
 	
 	public double uAusPundR(double p, double r) {
+		System.out.println("U calculated from R and P");
+		
 		return Math.sqrt(p*r);
 	}
 	
