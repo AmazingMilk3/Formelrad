@@ -81,8 +81,7 @@ public class Calculator {
 				strom = iAusPundR(leistung, widerstand);
 				spannung = uAusPundR(leistung, widerstand);
 			}
-		}
-		else if (spannung > 0) {
+		} else if (spannung > 0) {
 			if (strom > 0) {
 				leistung = pAusUundI(spannung, strom);
 				widerstand = rAusUundI(spannung, strom);
