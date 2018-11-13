@@ -94,18 +94,24 @@ public class Calculator {
 		}
 	}
 	
-	/* Hier die Methoden mit den Formlen hinzufügen
+	/* Hier die Methoden mit den Formeln hinzufügen
 	 */
 	
 	public double pAusUundI(double u, double i) {
+		System.out.println("P calculated from U and I");
+		
 		return u * i;
 	}
 	
 	public double pAusRundI(double r, double i) {
+		System.out.println("P calculated from R and I");
+		
 		return r * (i * i);
 	}
 	
 	public double pAusUundR(double u, double r) {
+		System.out.println("P calculated from U and R");
+		
 		return (u * u) / r;
 	}
 	
