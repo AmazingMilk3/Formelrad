@@ -90,6 +90,11 @@ public class Calculator {
 				strom = iAusUundR(spannung, widerstand);
 				leistung = pAusUundR(spannung, widerstand);
 			}
+		} else if (widerstand > 0) {
+			if (strom > 0) {
+				leistung = pAusRundI(widerstand, strom);
+				spannung = uAusRundI(widerstand, strom);
+			}
 		}
 	}
 	
