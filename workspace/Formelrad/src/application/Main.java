@@ -1,7 +1,5 @@
 package application;
 
-import java.io.FileInputStream;
-
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -25,7 +23,7 @@ public class Main extends Application {
 			Pane root = new Pane();
 
 			// Creating an image
-			Image image = new Image(getClass().getResourceAsStream("formelradelektronik.gif"));	
+			Image image = new Image(getClass().getResourceAsStream("formelradelektronik.gif"));
 			ImageView imageView = new ImageView(image);
 			imageView.setX(10);
 			imageView.setY(10);
@@ -78,8 +76,14 @@ public class Main extends Application {
 			btnBerechnen.relocate(100, 445);
 			btnBerechnen.setText("Berechnen");
 			root.getChildren().add(btnBerechnen);
-			
+
 			btnBerechnen.setOnAction(e -> {
+
+				txLeistung.setStyle("");
+				txSpannung.setStyle("");
+				txStrom.setStyle("");
+				txWiderstand.setStyle("");
+
 				double power = 0.0;
 				double tension = 0.0;
 				double current = 0.0;
@@ -100,10 +104,25 @@ public class Main extends Application {
 						power, tension, current, resistence);
 				System.out.print("Vorher:  ");
 				System.out.println(myCalculator.toString());
+
 				myCalculator.calculate();
+
+				if (power != myCalculator.getLeistung()) {
+					txLeistung.setStyle("-fx-text-inner-color: red;");
+				}
+				if (tension != myCalculator.getSpannung()) {
+					txSpannung.setStyle("-fx-text-inner-color: red;");
+				}
+				if (current != myCalculator.getStrom()) {
+					txStrom.setStyle("-fx-text-inner-color: red;");
+				}
+				if (resistence != myCalculator.getWiderstand()) {
+					txWiderstand.setStyle("-fx-text-inner-color: red;");
+				}
+
 				System.out.print("Nachher: ");
 				System.out.println(myCalculator.toString());
-					
+
 				txLeistung.setText(Double.toString(myCalculator.getLeistung()));
 				txSpannung.setText(Double.toString(myCalculator.getSpannung()));
 				txStrom.setText(Double.toString(myCalculator.getStrom()));
