@@ -77,10 +77,10 @@ public class Main extends Application {
 			btnBerechnen.setText("Berechnen");
 			root.getChildren().add(btnBerechnen);
 
-			Button btnInhalteLöschen = new Button();
-			btnInhalteLöschen.relocate(200, 445);
-			btnInhalteLöschen.setText("Inhalte löschen");
-			root.getChildren().add(btnInhalteLöschen);
+			Button btnInhalteLoeschen = new Button();
+			btnInhalteLoeschen.relocate(200, 445);
+			btnInhalteLoeschen.setText("Inhalte löschen");
+			root.getChildren().add(btnInhalteLoeschen);
 
 			btnBerechnen.setOnAction(e -> {
 
@@ -134,7 +134,7 @@ public class Main extends Application {
 				txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
 			});
 			
-			btnInhalteLöschen.setOnAction(e -> {
+			btnInhalteLoeschen.setOnAction(e -> {
 
 				txLeistung.setStyle("");
 				txSpannung.setStyle("");
